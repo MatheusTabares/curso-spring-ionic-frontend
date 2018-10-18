@@ -8,24 +8,27 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//MT:O que faz essa classe ser um module é a anotação decorator '@NgModule' que tem configurações para alterar a classe
 @NgModule({
   declarations: [
     MyApp,
     HomePage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,//MT:Módulos básicos da aplicação Ionic
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
+  entryComponents: [//MT:declarar as paginas do component
     MyApp,
     HomePage
   ],
-  providers: [
+  providers: [//MT:declarar as classes que serão uma única instância
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
+//MT:a palavra 'export' serve para dizer que essa classe pode ser importada em outros lugares do código
 export class AppModule {}
