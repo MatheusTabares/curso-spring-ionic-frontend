@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -11,8 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //MT:O que faz essa classe ser um module é a anotação decorator '@NgModule' que tem configurações para alterar a classe
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,//MT:Módulos básicos da aplicação Ionic
@@ -20,8 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   bootstrap: [IonicApp],
   entryComponents: [//MT:declarar as paginas do component
-    MyApp,
-    HomePage
+    MyApp
   ],
   providers: [//MT:declarar as classes que serão uma única instância
     StatusBar,
