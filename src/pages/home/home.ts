@@ -12,4 +12,10 @@ export class HomePage {
 
   }
 
+  login() {
+    //MT: navegar entre páginas
+    //MT: o método 'setRoot' não empilha páginas, o método 'push' empilha páginas
+    this.navCtrl.setRoot('CategoriasPage');
+  }
+
 }
