@@ -13,7 +13,7 @@ export class CategoriaService {
 
     //MT: Observable é um componente angular para tratar requisições assincronas
     findAll() : Observable<CategoriaDTO[]> {
-        return this.http.get<CategoriaDTO[]>(`${API_CONFIG.baseUrl}/categorias`);
+        return this.http.get<CategoriaDTO[]>(`${API_CONFIG.baseUrl}/categoriass`);
     }
 
 }
