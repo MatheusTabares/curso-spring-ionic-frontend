@@ -31,7 +31,7 @@ export class HomePage {
   login() {
     this.auth.authenticate(this.creds)
       .subscribe(response => {
-        console.log(response.headers.get('Authorization'));
+        this.auth.successfullLogin(response.headers.get('Authorization'));
         //MT: navegar entre páginas
         //MT: o método 'setRoot' não empilha páginas, o método 'push' empilha páginas
         this.navCtrl.setRoot('CategoriasPage');
