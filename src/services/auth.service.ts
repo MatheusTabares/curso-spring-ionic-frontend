@@ -19,7 +19,8 @@ export class AuthService {
                 creds,
                 {
                     observe : 'response',
-                    responseType: 'text'//MT: Tratamento de erro de conversão para JSON
+                    responseType: 'text'//MT: Especificar que o tipo da resposta é texto,
+                    // para não converter a resposta vazia em json, isso acarretaria em uma exceção
                 } )
     }  
     
