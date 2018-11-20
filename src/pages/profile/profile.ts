@@ -37,6 +37,7 @@ export class ProfilePage {
   getImageIfExists() {
     this.clienteService.getImageFromBucket(this.cliente.id)
       .subscribe(response => { 
+        //MT: será que aqui eu não poderia inserir na propriedade 'this.cliente.imageUrl' direto o response?
         this.cliente.imageUrl = `${API_CONFIG.bucketBaseUrl}/cp${this.cliente.id}.jpg`;
       },
       error => {});
