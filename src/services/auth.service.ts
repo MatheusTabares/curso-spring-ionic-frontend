@@ -23,6 +23,16 @@ export class AuthService {
                     // para não converter a resposta vazia em json, isso acarretaria em uma exceção
                 } )
     }  
+
+    refreshToken() {
+        return this.http.post(
+            `${API_CONFIG.baseUrl}/auth/refresh_token`,
+                {},
+                {
+                    observe : 'response',
+                    responseType: 'text'
+                } )
+    } 
     
     successfullLogin(authorizationValue : string) {
         let tok = authorizationValue.substring(7);
